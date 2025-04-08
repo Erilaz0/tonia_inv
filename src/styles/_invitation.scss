@@ -1,0 +1,338 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+button:hover{
+    background-color: #adadad21 !important;
+}
+.container{
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:auto;
+    padding-bottom: 500px;
+
+  .first_appear_container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+  
+    .firstImage{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        z-index: 2;
+        animation: apperOpacity 2s;
+    }
+    .names{
+        height: fit-content;
+        text-align: center;
+        width: 100% !important;
+        font-size: 58px;
+        margin-top: -5px;
+    }
+    .icon_one{
+        width: 80px;
+        height: 80px;
+        margin-top: -50px;
+        animation: iconMoves 3.5s infinite;
+    }
+    .message{
+        font-size: 25px;
+        text-align: center;
+        width: 250px;
+        animation: apperOpacity 2s;
+    }
+
+    .countdown{
+        display: flex;
+        width: 300px;
+        animation: apperOpacity 2s;
+        height: 260px;
+        background-position: center;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 50px;
+        margin-top: 10px;
+        .date-container{
+            display: flex;
+            background-color: rgb(253, 253, 253);
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px #0000001a, 0 6px 20px #0000001a;
+
+            .date{
+                width: fit-content;
+                max-height: 60px;
+                font-size: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid #00000060;
+                p{
+                    margin: 6px;
+                }
+                .word{
+                    font-size: 15px;
+                }
+            }
+            .date-s{
+                border-right: 0px;
+            }
+    
+        }
+     }
+    }  
+
+    .locations{
+        padding-top: 30px;
+        display: flex;
+        gap: 80px;
+        flex-wrap: wrap;
+        justify-content: center;
+        .loc{
+            width: 280px;
+            text-align: center;
+            img{
+                width: 230px;
+                height: 230px;
+            }
+            .title{
+                font-size: 25px;
+            }
+            p{
+                font-size: 18px;
+            }
+            button{
+                padding: 13px;
+                border-radius: 25px;
+                font-size: 18px;
+                box-shadow: 0 4px 8px #0000001a, 0 6px 20px #0000001a;
+            }
+
+            .hidden{
+                opacity: 0;
+                transform: translateX(-150px);
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+            .visible{
+                transform: translateX(0px);
+                opacity : 1
+            }
+        }
+    }
+    .specs{
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+
+        .spec{
+            width: 250px;
+            height: 435px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            box-shadow: 0 4px 8px #0000001a, 0 6px 20px #0000001a;
+            overflow: hidden;
+
+            .spec-title{
+                text-align: center;
+                font-size: 30px;
+                margin: 0;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                width: 100%;
+                clip-path: polygon(0px 12%, 100% 0px, 100% 86%, 0px 100%);
+                font-size: 38px;
+                border-bottom: 15px solid rgb(250, 230, 179);
+                border-top: 15px solid rgb(250, 230, 179);
+                font-family:"Dancing Script", cursive;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            img{
+                max-width: 190px !important;
+                max-height: 210px !important;             
+                min-width: 190px !important;
+                min-height: 210px !important;
+                margin-top: -10px;
+            }
+            .spec-description{
+             font-size: 20px;
+            }
+        }
+        .hidden{
+            opacity: 0;
+            transform: translateX(-150px) rotateY(120deg);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .visible{
+            transform: translateX(0px) rotateY(0deg);
+            opacity : 1
+        }
+    }
+    .assistance{
+        padding-top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        .assistance_title{
+          font-size: 43px;
+          margin: 0;
+        }
+        .assistance_subtitle{
+          font-size: 18px;
+          margin: 0;
+          font-weight:100px;
+        }
+        input{
+          height: 35px;
+          width: 100%;
+          max-width: 280px;
+          border-radius: 30px;
+          border: 0px;
+          display: flex;
+        
+        }
+        button{
+            padding: 15px;
+            width: 150px;
+            border-radius: 340px;
+        }
+        .hidden{
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .visible{
+            transform: translateX(0px);
+            opacity : 1
+        }
+    }
+    .photoIcon{
+        width: 100px;
+        height: 100px;
+        padding-top: 50px;
+        animation: iconMoves 3.5s infinite;
+        .hidden{
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+        .visible{
+            transform: translateX(0px);
+            opacity : 1
+        }
+    }
+    .swiper_container{
+        padding-bottom: 100px;
+        padding-top: 50px;
+        .swiper{
+            width: 250px;
+            display: flex;
+            .swiper-slide{
+                img{
+                    width: 100%;
+                    height: 250px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+    .gift_message{
+      width: 100%;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #dbc2a3;
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      justify-content: center;
+      p{
+        width: 90%;
+        text-align: center;
+      }
+      .hidden{
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out
+      }
+      .visible{
+        opacity : 1
+    }
+    }
+    .gift{
+        padding-top: 50px;
+        padding-bottom: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100px;
+            height: 100px;
+            animation: iconMoves 3.5s infinite;
+        }
+        button{
+            padding: 10px;
+            width: 150px;
+            border-radius: 30px;
+            font-size: 20px;
+        }
+        .hidden{
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: opacity 01.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .visible{
+            transform: translateX(0px);
+            opacity : 1
+        }
+    }
+}
+
+@keyframes iconMoves{
+    0%{
+       transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px) rotate(10deg);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes apperOpacity{
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

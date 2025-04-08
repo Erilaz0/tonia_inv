@@ -1,0 +1,23 @@
+SERVER SIDE DOCUMENTATION
+
+/api/invitation/[id] - GET - get user by its id 
+/api/invitation/[id] - PUT - add guest to the user document
+/api/invitation/[id]/guests - GET - get guests from database, the route response with a cookie( protected by token )
+/api/invitation/[id]/guests - PUT - delete guest from database ( protected by token )
+/api/invitation/[id]/table - PUT - add guest to table ( protected by token )
+/api/invitation/[id]/table/[number] - PUT - delete one table ( protected by token )
+/api/invitation/[id]/table/[number]/create - PUT - delete one table ( protected by token )
+/api/invitation/auth - POST - login ( token creation )
+
+
+CLIENT SIDE DOCUMENTATION
+
+/ - login page
+/card/[id] - Invitation component
+/user - Option section, here u can acces to all your guests data
+/user/invitados - All the guests data is in this section ( protected by token )
+/user/mensajes - Read the guests messages ( protected by token )
+/user/menu - Read the guests diets and make a count about the posibles restrictions ( protected by token )
+/user/mesas - CRUD in guests tables ( protected by token )
+/user/musica -  Read the guests musical recomendations ( protected by token )
+
