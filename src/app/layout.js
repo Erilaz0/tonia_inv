@@ -7,6 +7,8 @@ export default function RootLayout({ children }) {
        <link rel="preconnect" href="https://fonts.gstatic.com" />
        <meta property="og:image" content="https://tusitioweb.com/imagenes/tilogo.jpg"></meta>
        <meta property="og:title" content="¡Estás invitado a nuestra boda! 💍"></meta>
+       <meta property="og:description" content="Haz clic para ver todos los detalles y confirmar tu asistencia."></meta>
+       <meta property="og:url" content="https://tonia-inv.vercel.app/"></meta>
        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet"/>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
       </head>
