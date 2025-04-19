@@ -117,7 +117,7 @@ export default function UserApp(){
             <div className="quantity">
              <p className="title_invite" style={ { border: "0px" } }>Asistencia:</p>
              <p className="confirmed">Han Confirmado Asistencia: { quantity }</p>
-             <p className="unconfirmed">No Pueden Asistir: { guests && guests.length > 0 ? guests.length - quantity : 0 }</p>
+             <p className="unconfirmed">No Pueden Asistir: { original && original.length > 0 && original.length !== quantity ? original.length - quantity : 0 }</p>
             </div>
             <div className="topdf" onClick={ ()=>{ imprimir() } }>
              <Image loading="lazy" alt="pdf_icon" width={ 35 } height={ 20 } style={ { cursor: "pointer" } } src="/pdf_logo.png" />
