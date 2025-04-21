@@ -68,11 +68,12 @@ export default function Invitation( invitation ){
         <div className="container" style={ styles && { backgroundImage : styles.background } }>
          <div className="first_appear_container"> 
           <Image className="firstImage" width={300} height={300} alt="foto_principal" src={ card.images.imagen1 }></Image>
-          {
+          { card.model !== "pearl" ?
             card.model !== "pumpink" ?
             <p className="names"  style={ styles && { color: styles.namesColor , fontFamily : styles.namesFont } }>{ card.names }</p>
             :
             <p className="names"  style={ styles && { width: "100%", clipPath: "polygon(0px 7%, 100% 0px, 100% 92%, 0px 100%)", fontSize: "78px", color: styles.namesColor , fontFamily : styles.namesFont  , padding: "30px 20px 20px" , backgroundColor: "rgb(237, 208, 172)" ,marginTop: "-80px", borderBottom : "15px solid rgb(250, 230, 179)" , borderTop : "15px solid rgb(250, 230, 179)"} }>{ card.names }</p>
+            : ""
           }
           {
             styles && <Image className="icon_one" width={ 80 } height={ 80 } loading="lazy" alt="pdf_icon" style={ { cursor: "pointer" } } src={ styles.initialIcon } />
@@ -80,14 +81,14 @@ export default function Invitation( invitation ){
           <p style={ styles && { color : styles.messageColor } } className="message">{ card.message }</p>
            <Cronometrer date={ card.date } styles={ styles } px={ card.model && card.model !== "pumpink" ? "translateY(30px)" : "translateX(17px) translateY(20px)" }/>
          </div>
-         <div className="locations">
+         <div className="locations" style={ {  marginTop: invitation.invitation.model === "pearl" && "-40px" } }>
           {
             card.event_text !== "none" && 
             <div className="loc">
               {
                 styles && <Image alt="imagen_ceremonia" width={230} height={230} className="appear hidden" src={ styles && styles.ceremonyImg } style={ { borderBottom : card.model === "white" ? "1px solid rgba(0, 0, 0, 0.29)" : "0px"  } }></Image>
               }
-             <p className="title appear hidden" style={ styles && { fontFamily : styles.locationsH2Fonts , color : styles.locationTitleColor } }>Ceremonia</p>
+             <p className="title appear hidden" style={ styles && { marginTop: invitation.invitation.model === "pearl" && "-20px" , fontFamily : styles.locationsH2Fonts , color : styles.locationTitleColor } }>Ceremonia</p>
              <p className="appear hidden" style={ { fontFamily : styles && styles.locationsPFonts } }>{ card.event_text }</p>
              <button  onClick={ ()=>{ redirect( card.event_address ) } } className="appear hidden" style={ styles && { color: styles.buttonsColor, border: styles.buttonsBorder, backgroundColor : styles.buttonsBackgroundColor } } >Ver Ubicacion</button>
             </div>
@@ -98,7 +99,7 @@ export default function Invitation( invitation ){
               {
                 styles && <Image alt="imagen_ceremonia" width={230} height={230} className="appear hidden" src={ styles && styles.partyImg } style={ { borderBottom : card.model === "white" ? "1px solid rgba(0, 0, 0, 0.29)" : "0px"  } }></Image>
               }
-             <p className="title appear hidden"  style={ styles && { fontFamily : styles.locationsH2Fonts , color : styles.locationTitleColor } }>Celebración</p>
+             <p className="title appear hidden"  style={ styles && {  marginTop: invitation.invitation.model === "pearl" && "-20px",fontFamily : styles.locationsH2Fonts , color : styles.locationTitleColor } }>Celebración</p>
              <p className="appear hidden" style={ { fontFamily : styles && styles.locationsPFonts } }>{ card.event_text }</p>
              <button onClick={ ()=>{ redirect( card.party_address ) } } className="appear hidden" style={ styles && { color: styles.buttonsColor, border: styles.buttonsBorder, backgroundColor : styles.buttonsBackgroundColor } } >Ver Ubicacion</button>
             </div>
@@ -108,7 +109,7 @@ export default function Invitation( invitation ){
             { styles && 
                 card.dress_code !== "none" && 
                 <div className="spec appear hidden" style={ { border : styles.specBorder , backgroundColor : styles.specsBackground } }>
-                <p  style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle } } className="spec-title">Dress Code</p>
+                <p  style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle , border: card.model === "pearl" && "0px" } } className="spec-title">Dress Code</p>
                 <Image alt="dress_code" width={190} height={210} src={ styles.dressCode } style={ { border : styles.specsBorderImage  } }></Image>
                 <p style={ { color : styles.specColorP } }  className="spec-description">{ card.dress_code }</p>
                </div>
@@ -116,7 +117,7 @@ export default function Invitation( invitation ){
             { styles && 
                 card.bar !== "none" &&
                 <div className="spec appear hidden" style={ { border : styles.specBorder, backgroundColor : styles.specsBackground } }>
-                <p  style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle } } className="spec-title">Bar</p>
+                <p  style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle , border: card.model === "pearl" && "0px" } } className="spec-title">Bar</p>
                 <Image alt="bar" width={190} height={210} src={ styles.bar } style={ { border : styles.specsBorderImage  } }></Image>
                 <p style={ { color : styles.specColorP } }  className="spec-description">{ card.bar }</p>
                </div>
@@ -124,7 +125,7 @@ export default function Invitation( invitation ){
             { styles &&
                 card.kids !== "none" && 
                 <div className="spec appear hidden" style={ { border : styles.specBorder , backgroundColor : styles.specsBackground } }>
-                <p style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle } } className="spec-title">Niños</p>
+                <p style={ { color : styles.specColorTitle , fontFamily : styles.specTitleFont , backgroundColor : styles.specsBackgroundTitle , border: card.model === "pearl" && "0px" } } className="spec-title">Niños</p>
                 <Image alt="kids" width={190} height={210} src={ styles.kids } style={ { border : styles.specsBorderImage  } }></Image>
                 <p style={ { color : styles.specColorP } }  className="spec-description">{ card.kids }</p>
                </div>

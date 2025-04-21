@@ -120,5 +120,43 @@ export const createPackDecoration = ( model )=>{
       decorationPack.hoverButtons = "#f3c8c9"
       return decorationPack
     }
+    else if( model === "pearl" ){
+      decorationPack.background = "url(/pearl.png)"
+      decorationPack.buttonsBackgroundColor = "#ffffff"
+      decorationPack.buttonsColor = "rgb(166, 145, 122)"
+      decorationPack.buttonsBorder = "1px solid rgb(237, 208, 214)"
+      decorationPack.initialIcon = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745189147/_Estas_invitado_a_mi_boda___1_-removebg-preview_d6crln.png"
+      decorationPack.cronometrer = "url(https://res.cloudinary.com/ddrymuqfl/image/upload/v1745188898/Invitaci%C3%B3n_vertical_Boda_Nos_casamos_Floral_Verde_y_Beige-removebg-preview_1_hwa9lt.png)"
+      decorationPack.cronometrerColor = "#7f7708"
+      decorationPack.cronometrerLetterFont = "Courier New,Courier,monospace"
+      decorationPack.cronometrerNumberFont = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+      decorationPack.ceremonyImg = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745190237/_Estas_invitado_a_mi_boda___1_-removebg-preview_vra55e.png"
+      decorationPack.partyImg = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745190370/_Estas_invitado_a_mi_boda___2_-removebg-preview_gppvei.png"
+      decorationPack.namesFont = "'Times New Roman', Times, serif"
+      decorationPack.namesColor = "hsl(0, 0.00%, 65.50%)"
+      decorationPack.messageColor = "#b99262" 
+      decorationPack.locationTitleColor = "rgb(170, 142, 111)"
+      decorationPack.locationsPFonts = "Courier New,Courier,monospace"
+      decorationPack.locationsH2Fonts = "'Times New Roman', Times, serif"
+      decorationPack.dressCode = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745190831/drcode-removebg-preview_qf0mm2.png"
+      decorationPack.bar = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745190831/bar-removebg-preview_zbwvwx.png"
+      decorationPack.kids = "https://res.cloudinary.com/ddrymuqfl/image/upload/v1745190831/ch-removebg-preview_ribzhl.png"
+      decorationPack.specsBorderImage = "0px solid #95c78f"
+      decorationPack.specsBackgroundTitle = "rgb(88, 88, 88)"
+      decorationPack.specsBackground = "rgba(113, 237, 79, 0)"
+      decorationPack.specsFont = "'Courier New', Courier, monospace"
+      decorationPack.specColorP = "rgb(81, 81, 81)"
+      decorationPack.specColorTitle = "#ffffff"
+      decorationPack.specTitleFont = danceScript
+      decorationPack.specBorder = "2px solid rgba(172, 170, 164, 0.4)"
+      decorationPack.assistanceTitleFont = "'Courier New', Courier, monospace"
+      decorationPack.assistanceSubTitleFont = "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"
+      decorationPack.assistanceSubTitleColor = "#968166"
+      decorationPack.photoIcon = "https://firebasestorage.googleapis.com/v0/b/planticommerce.appspot.com/o/invitations%2Fcamera5.png?alt=media&token=699b551c-6cdf-41e6-be53-705154968df2"
+      decorationPack.giftIcon = "https://firebasestorage.googleapis.com/v0/b/planticommerce.appspot.com/o/invitations%2Fgift8.png?alt=media&token=030d2979-2c53-440b-8801-e33271270515"
+      decorationPack.borderButtonGift = "1px solid #fff"
+      decorationPack.hoverButtons = "#f3c8c9"
+      return decorationPack
+    }
 }
 

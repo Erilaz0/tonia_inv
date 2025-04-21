@@ -31,7 +31,6 @@ class CardsClass{
             body: JSON.stringify( guest )
         })
         const response = await request.json()
-        console.log( response )
         return response
     }
 
